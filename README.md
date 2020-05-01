@@ -1,2 +1,3 @@
 # CodeBase
-a go to website for all coding related things
+
+a go to website for all coding related stuff
