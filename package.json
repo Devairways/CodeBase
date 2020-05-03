@@ -1,0 +1,22 @@
+{
+  "name": "codebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexjoseph/CodeBase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rexjoseph/CodeBase/issues"
+  },
+  "homepage": "https://github.com/rexjoseph/CodeBase#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
