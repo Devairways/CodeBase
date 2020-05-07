@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Card />
+      <Card title="Hello World" text="Hello world, how we holding up" />
     </div>
   );
 }
