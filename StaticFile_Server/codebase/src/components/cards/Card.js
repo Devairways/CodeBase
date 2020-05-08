@@ -1,7 +1,6 @@
 import React from "react";
 
-function Card() {
-  const { title, text } = this.props;
+function Card({ title, text }) {
   return (
     <card className="card">
       <h2>{title}</h2>
