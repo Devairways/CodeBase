@@ -5,18 +5,25 @@
   flex-direction: column;
   font-family: $text-font;
   align-items: center;
-  width: 20em;
-  box-shadow: 3px 3px 5px grey;
+  width: 90%;
+  margin: 5%;
+  box-shadow: 3px 3px 5px $grey;
+  h2 {
+    margin: 0px;
+    display: flex;
+    font-family: $header-font;
+    justify-content: center;
+    align-items: center;
+    background: $highlight;
+    color: white;
+    height: 45px;
+    width: 100%;
+  }
 }
 
-.card h2 {
-  margin: 0px;
-  display: flex;
-  font-family: $header-font;
-  justify-content: center;
-  align-items: center;
-  background: #c132e3;
-  color: white;
-  height: 45px;
-  width: 100%;
+@media only screen and (min-width: 600px) {
+  .card {
+    width: 20em;
+    margin: 0px;
+  }
 }

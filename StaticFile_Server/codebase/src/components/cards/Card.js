@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({ title, text }) {
   return (
-    <card className="card">
+    <div className="card">
       <h2>{title}</h2>
       <div>
         <p>Course</p>
@@ -13,7 +13,7 @@ function Card({ title, text }) {
         </p>
         <p>{text}</p>
       </div>
-    </card>
+    </div>
   );
 }
 

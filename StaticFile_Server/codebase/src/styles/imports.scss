@@ -1,9 +1,18 @@
 @import "components/Nav";
 @import "components/Card";
 @import "components/Feed";
+@import "components/Forum";
 
 /*global styles*/
 body {
   margin: 0;
+  font-family: $header-font;
+}
+
+p {
+  font-family: $text-font;
+}
+
+h2 {
   font-family: $header-font;
 }
