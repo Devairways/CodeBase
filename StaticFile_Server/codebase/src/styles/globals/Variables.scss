@@ -1,10 +1,17 @@
-  
-/*colors*/
-$light-black: #40444b;
-$medium-black: #2f3136;
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&display=swap');
+
+$header-font: 'Source Sans Pro', sans-serif;
+$text-font: 'Montserrat', sans-serif;
+
+/*style-colors*/
+$light-grey: #fafafa;
+$border: #f1f3f5;
+$highlight: linear-gradient(to right, #f500f5 , indigo);
+
 $dark-black: #292b2f;
 $darker-black: #202225;
 
 /*text-colors*/
-$grey: #859297;
+$grey: #999999;
 $white: #fff;
