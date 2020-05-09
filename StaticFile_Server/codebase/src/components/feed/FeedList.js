@@ -6,7 +6,7 @@ function FeedList() {
     <div className="feedlist">
         <div>
             <ul className="nav_ul">
-                <li>Following</li>
+                <li className="selected">Following</li>
                 <li>Featured</li>
                 <li>Top Posts</li>
                 <li>Recommended</li>

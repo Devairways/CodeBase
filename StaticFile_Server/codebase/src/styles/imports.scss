@@ -1,3 +1,9 @@
 @import "components/Nav";
 @import "components/Card";
 @import "components/Feed";
+
+/*global styles*/
+body{
+    margin: 0;
+    font-family: $header-font;
+}

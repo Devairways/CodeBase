@@ -4,12 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20em;
+  padding: 5px;
   ul{
     display: flex;
     flex-direction: row;
     list-style: none;
     padding: 0;
+    border-bottom: 2px solid $border;
   }
 }
 
@@ -26,6 +27,7 @@
   }
   span[class="category"]{
     background: $highlight;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -50,4 +52,10 @@
   h1{
     margin-top: 0;
   }
+}
+
+.selected{
+  border-bottom: 3px solid;
+  border-image-slice: 1;
+  border-image-source: $highlight;
 }
