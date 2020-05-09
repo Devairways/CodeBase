@@ -6,7 +6,11 @@ function Card({ title, text }) {
       <h2>{title}</h2>
       <div>
         <p>Course</p>
-        <p>MongoDB Advanced Concepts</p>
+        <p>
+          <b>
+            <i>MongoDB Advanced Concepts</i>
+          </b>
+        </p>
         <p>{text}</p>
       </div>
     </card>
