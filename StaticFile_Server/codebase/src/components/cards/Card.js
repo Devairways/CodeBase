@@ -4,7 +4,11 @@ function Card({ title, text }) {
   return (
     <card className="card">
       <h2>{title}</h2>
-      <p>{text}</p>
+      <div>
+        <p>Course</p>
+        <p>MongoDB Advanced Concepts</p>
+        <p>{text}</p>
+      </div>
     </card>
   );
 }

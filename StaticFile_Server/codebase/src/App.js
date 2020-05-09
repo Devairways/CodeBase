@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Card title="Hello World" text="Hello world, how we holding up" />
-      <FeedList/>
+      <FeedList />
     </div>
   );
 }
