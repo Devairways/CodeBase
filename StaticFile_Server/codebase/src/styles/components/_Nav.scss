@@ -13,7 +13,7 @@
         list-style: none;
         font-weight: bold;
         margin: 0;
-        padding: 0;
+        padding: 0 10px;
     }
     h2{
         width: min-content;
@@ -33,6 +33,10 @@
 
 li{
     padding: 5px;
+    &:hover{
+        color: black;
+        cursor: pointer;
+    }
 }
 
 /*Media Queries*/
