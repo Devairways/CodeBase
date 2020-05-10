@@ -1,34 +1,29 @@
 @import "globals/Variables";
 
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Roboto"), local("Roboto-Regular"),
-    url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2)
-      format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
 .card {
   display: flex;
   flex-direction: column;
-  font-family: "Roboto";
+  font-family: $text-font;
   align-items: center;
-  width: 20em;
-  box-shadow: 1px 2px 2px grey;
+  width: 90%;
+  margin: 5%;
+  box-shadow: 3px 3px 5px $grey;
+  h2 {
+    margin: 0px;
+    display: flex;
+    font-family: $header-font;
+    justify-content: center;
+    align-items: center;
+    background: $highlight;
+    color: white;
+    height: 45px;
+    width: 100%;
+  }
 }
 
-.card h2 {
-  margin: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #c132e3;
-  color: white;
-  height: 45px;
-  width: 100%;
+@media only screen and (min-width: 600px) {
+  .card {
+    width: 20em;
+    margin: 0px;
+  }
 }
