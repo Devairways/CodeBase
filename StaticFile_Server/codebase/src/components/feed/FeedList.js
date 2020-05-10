@@ -4,8 +4,8 @@ import FeedCard from './FeedCard';
 function FeedList() {
   return (
     <div className="feedlist">
-        <div>
-            <ul className="nav_ul">
+        <div className="feed_nav">
+            <ul>
                 <li className="selected">Following</li>
                 <li>Featured</li>
                 <li>Top Posts</li>

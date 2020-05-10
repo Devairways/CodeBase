@@ -5,8 +5,10 @@ function FeedCard({feed}){
     return (
         <div className="feedcard">
             <div className="card_head">
-                <img src='https://i.kym-cdn.com/photos/images/newsfeed/000/252/758/c6f.jpg'  height="45px" width="45px" style={{borderRadius:"50%"}} alt="profile_picture"/>
-                <h2>{user} <span className="post">posted in</span> <span className="category">{category}</span></h2>
+                <div className="subject">
+                    <img src='https://i.kym-cdn.com/photos/images/newsfeed/000/252/758/c6f.jpg'  height="45px" width="45px" style={{borderRadius:"50%"}} alt="profile_picture"/>
+                    <h2>{user} <span className="post">posted in</span> <span className="category">{category}</span></h2>
+                </div>
                 <span>{`${count} hours ago`}</span>
             </div>
             <div className="card_body">
