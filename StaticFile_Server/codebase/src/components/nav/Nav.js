@@ -25,7 +25,7 @@ function NavBar() {
                 <li><img src={bell} height="20px" width="20px" alt="notification"/></li>
                 <li><img src={search}  height="15px" width="15px" alt="search"/></li>
                 <li><img src={plus}  height="30px" width="30px"  alt="add"/></li>
-                <li><img src={chick}  height="30px" width="30px" style={{borderRadius:"50%", marginTop:"-5px"}} alt="profile_picture"/></li>
+                <li><img src={chick}  height="30px" width="30px" alt="profile_picture"/></li>
             </ul>
         </div> 
     </nav>
