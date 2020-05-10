@@ -18,6 +18,7 @@
 .feedcard{
   border: 1px solid $border;
   border-radius: 10px;
+  // box-shadow: 4px 4px 10px #999999;
   margin: 10px auto;
   span{
     color:$grey;
@@ -39,13 +40,16 @@
 
 .card_head{
   font-family: $header-font;
+  background-color: white;
+  border-radius: 10px 10px 0 0;
   border-bottom: 1px solid $border;
   padding: 5px;
 }
 
 .card_body{
   font-family: $text-font;
-  background-color: $light-grey;
+  background-color: $darker-grey;
+  border-radius: 0 0 10px 10px;
   padding: 10px;
   h1,p{
     margin-bottom: 0;
@@ -59,4 +63,39 @@
   border-bottom: 3px solid;
   border-image-slice: 1;
   border-image-source: $highlight;
+}
+
+/*Media Queries*/
+
+@media only screen and (min-width: 600px) {
+  .feed_nav{
+    width: 90%;
+    ul{
+      justify-content: space-evenly;
+    }
+  }
+
+  .feed_content{
+    width: 90%;
+  }
+
+  .card_head{
+    display: flex;
+    align-items: center;
+    h2{
+      margin: 5px 20px;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .feed_nav{
+    font-size: 1.2em;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
