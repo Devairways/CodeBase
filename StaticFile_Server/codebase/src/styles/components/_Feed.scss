@@ -52,6 +52,7 @@
 }
 
 .card_body{
+  display: flex;
   font-family: $text-font;
   background-color: $darker-grey;
   border-radius: 0 0 10px 10px;
@@ -63,7 +64,9 @@
     margin-top: 0;
   }
 }
-
+.poster{
+  display: none;
+}
 .selected{
   color: black;
   border-bottom: 3px solid;
@@ -93,6 +96,16 @@
     h2{
       margin: 5px 20px;
     }
+  }
+
+  .card_body{
+    div{
+      padding: 10px;
+    }
+  }
+
+  .poster{
+    display: inline;
   }
 }
 

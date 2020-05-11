@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // nog te veranderen in migratie naar next.js!
 import bell from '../../assets/icons/bell_icon.png';
@@ -6,6 +6,10 @@ import bookmark from '../../assets/icons/bookmark_icon.png';
 import search from '../../assets/icons/search_icon.png';
 
 function Footer() {
+    const [open1, setOpen1] = useState(false);
+	const [open2, setOpen2] = useState(false);
+	const [open3, setOpen3] = useState(false);
+    
   return (
     <footer className="footer">
         <div className="footer_main">
@@ -29,23 +33,26 @@ function Footer() {
                     <li><img src={search}  height="15px" width="15px" alt="search"/></li>
                 </ul>
             </div>
-            <div>
+            <div className="accordion" onClick={() =>{setOpen1(!open1) }}>
                 <h4>Product</h4>
-                <ul className="footer_links">
+                <img className="arrowRotate" style={open1 ? {transform:"rotate(180deg)"}: null} src={require("../../assets/arrow.png")} alt="arrow"/>
+                <ul className="paneel" style={open1 ? {maxHeight:"250px"}: {maxHeight:"0"}}>
                     <li>How it works</li>
                     <li>Help & Support</li>
                 </ul>
             </div>
-            <div>
+            <div className="accordion" onClick={() =>{setOpen2(!open2) }}>
                 <h4>About Us</h4>
-                <ul className="footer_links">
+                <img className="arrowRotate" style={open2 ? {transform:"rotate(180deg)"}: null} src={require("../../assets/arrow.png")} alt="arrow"/>
+                <ul className="paneel" style={open2 ? {maxHeight:"250px"}: {maxHeight:"0"}}>
                     <li>Mission</li>
                     <li>Investors</li>
                 </ul>
             </div>
-            <div>
+            <div className="accordion" onClick={() =>{setOpen3(!open3) }}>
                 <h4>Contact</h4>
-                <p>Support@codebase.com</p>
+                <img className="arrowRotate" style={open3 ? {transform:"rotate(180deg)"}: null} src={require("../../assets/arrow.png")} alt="arrow"/>
+                <p className="paneel" style={open3 ? {maxHeight:"250px"}: {maxHeight:"0"}}>Support@codebase.com</p>
             </div>
             
         </div>
