@@ -22,7 +22,7 @@ function ForumTopicsContainer() {
           alt="image"
           className="forum-body-img"
         />
-        <div>
+        <div className="forum-text">
           <div className="forum-body-header">
             <div className="forum-body-title">
               <h2>Hello</h2>
