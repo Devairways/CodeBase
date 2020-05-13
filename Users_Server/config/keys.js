@@ -11,5 +11,7 @@
 
 module.exports = {
   googleClientID: '703539071362-vs9vffnmmsb07197643jvk38dqfrs8u9.apps.googleusercontent.com',
-  googleClientSecret: 'ggY92c4Xd5hp2Xek0qwvtsH1'
+  googleClientSecret: 'ggY92c4Xd5hp2Xek0qwvtsH1',
+  mongoURI: 'mongodb+srv://admin:Codebase!@cluster0-md6hl.mongodb.net/test?retryWrites=true&w=majority'
+  // cookieKey: process.env.COOKIE_KEY
 }
