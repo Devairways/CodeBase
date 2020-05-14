@@ -1,7 +1,7 @@
 .forum-topics-container {
   display: flex;
   flex-direction: column;
-  width: 360px;
+  width: 90%;
   margin: auto;
   box-shadow: 4px 4px 10px $grey;
   border-radius: 10px;
@@ -18,7 +18,7 @@
     align-items: center;
   }
   .forum-tail {
-    display: flex;
+    display: none;
   }
   img {
     border-radius: 50%;
@@ -51,12 +51,9 @@
     border-bottom-right-radius: 10px;
   }
   .forum-body-img {
-    border-radius: 10px;
-    margin: 10px;
-    height: 200px;
+    display: none;
   }
   .forum-body-header {
-    width: 80%;
     display: flex;
   }
   .forum-body-title {
@@ -64,20 +61,19 @@
   }
   .forum-body-buttons {
     display: flex;
-    flex-direction: column;
     width: 50%;
     justify-content: center;
     align-items: center;
     button {
       background: white;
-      margin: 0 5px;
+      margin: 0 2px;
       border: none;
+      font-size: 0.6em;
     }
   }
   .forum-body-text {
     font-size: 0.8em;
     font-weight: bold;
-    width: 80%;
     height: 50%;
     overflow: auto;
   }
@@ -86,13 +82,18 @@
 @media only screen and (min-width: 600px) {
   .forum-topics-container {
     width: 90%;
-  }
-  .forum-body-buttons {
-    flex-direction: row !important;
-  }
-  .forum-body-text {
-    width: 100%;
-    height: 50%;
+    .forum-body-img {
+      display: flex;
+      border-radius: 10px;
+    }
+    .forum-tail {
+      display: flex;
+    }
+    .forum-body-buttons {
+      button {
+        font-size: 1em;
+      }
+    }
   }
 }
 
@@ -100,9 +101,18 @@
 @media only screen and (min-width: 768px) {
   .forum-topics-container {
     width: 800px;
+    .forum-body-img {
+      display: inline-flex;
+    }
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .forum-body-img {
+    display: inline-flexbox;
+    border-radius: 10px;
+    margin: 10px;
+    height: 200px;
+  }
 }
