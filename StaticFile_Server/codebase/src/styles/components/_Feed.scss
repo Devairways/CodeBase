@@ -19,7 +19,7 @@
 .feedcard{
   border: 1px solid $border;
   border-radius: 10px;
-  // box-shadow: 4px 4px 10px #999999;
+  box-shadow: 4px 4px 10px #999999;
   margin: 10px auto;
   span{
     color:$grey;
@@ -33,6 +33,9 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  img[alt="poster"]{
+    border-radius: 10px;
   }
   h2{
     margin: 5px;
@@ -113,10 +116,20 @@
 @media only screen and (min-width: 768px) {
   .feed_nav{
     font-size: 1.2em;
+    max-width: 800px;
+  }
+  .feed_content{
+    max-width: 800px;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
+  .feedlist{
+    grid-row: 2/4;
+    grid-column: 2/3;
+  }
+  .feed_nav,.feed_content{
+    width: 800px;
+  }
 }
