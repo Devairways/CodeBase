@@ -6,6 +6,8 @@
     height: fit-content;
     border: 2px solid $border;
     border-radius: 10px;
+    margin: auto;
+    margin-bottom: 40px;
     h3{
         border-bottom: 2px solid $border;
         margin: 0;
@@ -14,6 +16,9 @@
     h4{
         margin: 10px;
         width: 110px;
+    }
+    span{
+        color: $grey;
     }
 }
 

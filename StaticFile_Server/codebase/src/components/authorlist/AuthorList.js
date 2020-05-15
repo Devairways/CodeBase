@@ -6,7 +6,7 @@ import trophy from '../../assets/icons/trophy_icon.png';
 function AuthorList(){
     return (
         <div className="authorlist">
-            <h3>Top Authors</h3>
+            <h3>Top <span>Authors</span></h3>
             {
                 tempList.map((author, i) =>{
                     return (
