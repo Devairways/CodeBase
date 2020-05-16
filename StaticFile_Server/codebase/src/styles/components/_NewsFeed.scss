@@ -1,0 +1,47 @@
+@import "globals/Variables";
+
+.newsfeed{
+    border: 2px solid $border;
+    border-radius: 10px;
+    margin: 60px auto;
+    margin-bottom: 40px;
+    min-width: 230px;
+    max-width: 800px;
+    h2{
+        border-bottom: 2px solid $border;
+        margin: 0;
+        padding: 20px 10px;
+    }
+    span{
+        color: $grey;
+    }
+}
+
+.newscard{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    span{
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+   .newsfeed{
+       width: 90%;
+   }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .newsfeed{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+}

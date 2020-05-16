@@ -1,9 +1,12 @@
 @import "components/Nav";
 @import "components/AuthorList";
 @import "components/Card";
+@import "components/NewsFeed";
 @import "components/Feed";
 @import "components/Forum";
 @import "components/Footer";
+
+@import "globals/Variables";
 
 /*global styles*/
 body {
