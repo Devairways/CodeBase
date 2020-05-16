@@ -29,7 +29,7 @@ h2 {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .App {
+  #__next {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
   }
