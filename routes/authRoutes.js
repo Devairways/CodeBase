@@ -4,7 +4,9 @@ module.exports = app => {
 
   // home page route
   app.get('/', (req, res) => {
-    res.send('<h4>Welcome to the server</h4>')
+    res.send(
+      `<h2><b><center>You signed out!</center></b></h2>`
+    )
   })
 
   // google auth route
@@ -18,7 +20,9 @@ module.exports = app => {
   // logout route
   app.get('/api/logout', (req, res) => {
     req.logout();
-    res.send('<h3>You signed out!</h4>')
+    res.send(
+      `<h2><b><center>You signed out!</center></b></h2>`
+    )
   });
 
   app.get('/api/current_user', (req, res) => {
