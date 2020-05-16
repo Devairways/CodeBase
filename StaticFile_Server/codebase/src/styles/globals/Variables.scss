@@ -1,12 +1,13 @@
 /*Fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&family=Work+Sans:wght@900&display=swap');
 
+$logo-font: 'Work Sans', sans-serif;
 $header-font: 'Source Sans Pro', sans-serif;
 $text-font: 'Montserrat', sans-serif;
 
 /*style-colors*/
 $light-grey: #fcfcfc;
-$darker-grey: #fafafa;
+$darker-grey: #eceff2;
 $border: #e1e4e6;
 $highlight: linear-gradient(to right, #f500f5 , indigo);
 

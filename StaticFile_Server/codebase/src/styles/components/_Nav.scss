@@ -16,6 +16,7 @@
         padding: 0 10px;
     }
     h2{
+        font-family: $logo-font;
         width: min-content;
         margin: 0;
     }
@@ -34,7 +35,7 @@
 }
 
 li{
-    padding: 5px;
+    padding: 5px 10px;
     font-family: $header-font;
     &:hover{
         color: black;
@@ -81,8 +82,13 @@ li{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .nav{
+        grid-row: 1/2;
+        grid-column: 1/4;
         font-size: 1.2em;
         padding: 0 40px;
+        img[alt="notification"]{
+            margin-top: 5px;
+        }
         h2{
             margin-right: 40px;
         }
