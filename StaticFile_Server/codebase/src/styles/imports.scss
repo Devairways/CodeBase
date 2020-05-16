@@ -5,6 +5,7 @@
 @import "components/Feed";
 @import "components/Forum";
 @import "components/Footer";
+@import "components/ProfileCard";
 
 @import "globals/Variables";
 
@@ -22,18 +23,17 @@ p {
 h2 {
   font-family: $header-font;
 }
-.commercial{
+.commercial {
   display: none;
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .App{
+  .App {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
   }
-  .commercial{
+  .commercial {
     display: block;
   }
 }
-
