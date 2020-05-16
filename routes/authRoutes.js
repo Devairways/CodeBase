@@ -21,7 +21,7 @@ module.exports = app => {
   app.get('/api/logout', (req, res) => {
     req.logout();
     res.send(
-      `<h2><b><center>You signed out!</center></b></h2>`
+      `<h2><center>You signed out!</center></h2>`
     )
   });
 
