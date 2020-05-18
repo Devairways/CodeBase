@@ -2,18 +2,12 @@ import React, { useState } from 'react';
 
 
 function Footer() {
-<<<<<<< HEAD
     const [open, setOpen] = useState(
         {
         1: false,
         2: false,
         3: false
         });
-=======
-    const [open1, setOpen1] = useState(false);
-	const [open2, setOpen2] = useState(false);
-	const [open3, setOpen3] = useState(false);
->>>>>>> 95e4404aea7869113cdd72684a38d1aeb5692b77
     
   return (
     <footer className="footer">
@@ -38,47 +32,26 @@ function Footer() {
                     <li><img src='/assets/icons/search_icon.png'  height="15px" width="15px" alt="search"/></li>
                 </ul>
             </div>
-<<<<<<< HEAD
             <div className="accordion" onClick={() =>{ setOpen({...open, [1]: !open[1]}); }}>
                 <h4>Product</h4>
                 <img className="arrowRotate" style={open[1] ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow"/>
                 <ul className="paneel" style={open[1] ? {maxHeight:"250px"}: {maxHeight:"0"}}>
-=======
-            <div className="accordion" onClick={() =>{setOpen1(!open1) }}>
-                <h4>Product</h4>
-                <img className="arrowRotate" style={open1 ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow"/>
-                <ul className="paneel" style={open1 ? {maxHeight:"250px"}: {maxHeight:"0"}}>
->>>>>>> 95e4404aea7869113cdd72684a38d1aeb5692b77
                     <li>How it works</li>
                     <li>Help & Support</li>
                 </ul>
             </div>
-<<<<<<< HEAD
             <div className="accordion" onClick={() =>{ setOpen({...open, 2: !open[2]}); }}>
                 <h4>About Us</h4>
                 <img className="arrowRotate" style={open[2] ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow"/>
                 <ul className="paneel" style={open[2] ? {maxHeight:"250px"}: {maxHeight:"0"}}>
-=======
-            <div className="accordion" onClick={() =>{setOpen2(!open2) }}>
-                <h4>About Us</h4>
-                <img className="arrowRotate" style={open2 ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow"/>
-                <ul className="paneel" style={open2 ? {maxHeight:"250px"}: {maxHeight:"0"}}>
->>>>>>> 95e4404aea7869113cdd72684a38d1aeb5692b77
                     <li>Mission</li>
                     <li>Investors</li>
                 </ul>
             </div>
-<<<<<<< HEAD
             <div className="accordion" onClick={() =>{ setOpen({...open, 3: !open[3]}); }}>
                 <h4>Contact</h4>
                 <img className="arrowRotate" style={open[3] ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow"/>
                 <p className="paneel" style={open[3] ? {maxHeight:"250px"}: {maxHeight:"0"}}>Support@codebase.com</p>
-=======
-            <div className="accordion" onClick={() =>{setOpen3(!open3) }}>
-                <h4>Contact</h4>
-                <img className="arrowRotate" style={open3 ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow"/>
-                <p className="paneel" style={open3 ? {maxHeight:"250px"}: {maxHeight:"0"}}>Support@codebase.com</p>
->>>>>>> 95e4404aea7869113cdd72684a38d1aeb5692b77
             </div>
             
         </div>
