@@ -8,7 +8,7 @@ function NavBar() {
         <div className="nav_main">
             <h2 className="selected">codebase</h2>
             <ul className="nav_links">
-                <li>FEED</li>
+                <li onClick={() => Router.push('/Homepage', "/")}>FEED</li>
                 <li>DISCOVER</li>
                 <li>TUTORIALS</li>
                 <li>CATEGORIES</li>

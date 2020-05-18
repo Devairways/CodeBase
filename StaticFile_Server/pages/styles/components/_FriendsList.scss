@@ -1,0 +1,63 @@
+@import "globals/Variables";
+
+.friendslist{
+    height: fit-content;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 40px;
+    h3{
+        margin: 0;
+        padding: 10px 10px;
+    }
+    h4{
+        margin: 0;
+    }
+    span[alt="online"]{
+        width: 10px;
+        height: 10px;
+        border: 1px solid white;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: 40px;
+        margin-top: -10px;
+    }
+    span[alt="arrow"]{
+        background: $highlight;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.friend{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid $border;
+    border-radius: 10px;
+    margin: 3px auto;
+    img[alt="profile pic"]{
+        border-radius: 50%;padding-left: 5px;
+    }
+    img[alt="person"]{
+        position: absolute;
+        padding-left: 180px;
+    }
+    div{
+        width: fit-content;
+        padding-left: 10px;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .friendslist{
+      grid-row: 3/4;
+      grid-column: 1/2;
+      margin: 60px auto;
+    }
+  }
+  
+  
