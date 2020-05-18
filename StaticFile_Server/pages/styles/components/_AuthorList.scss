@@ -1,0 +1,51 @@
+
+@import "globals/Variables";
+
+.authorlist{
+    width: 200px;
+    height: fit-content;
+    border: 2px solid $border;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 40px;
+    h3{
+        border-bottom: 2px solid $border;
+        margin: 0;
+        padding: 20px 10px;
+    }
+    h4{
+        margin: 10px;
+        width: 110px;
+    }
+    span{
+        color: $grey;
+    }
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    img[alt="profile pic"]{
+        border-radius: 50%;padding-left: 5px;
+    }
+    img[alt="Trophy"]{
+        margin-bottom: -5px;
+        padding-right: 2px;
+    }
+    div{
+        width: 50px;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .authorlist{
+      grid-row: 2/3;
+      grid-column: 1/2;
+      margin: 60px auto;
+    }
+  }
+  
+  
