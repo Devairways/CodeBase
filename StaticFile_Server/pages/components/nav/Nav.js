@@ -1,6 +1,7 @@
 import React from 'react';
 import Router from 'next/router';
 
+
 function NavBar() {
   return (
     <nav className="nav">
