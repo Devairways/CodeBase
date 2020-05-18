@@ -1,4 +1,5 @@
 import React from 'react';
+import Router from 'next/router';
 
 function NavBar() {
   return (
@@ -18,7 +19,7 @@ function NavBar() {
                 <li><img src='/assets/icons/bell_icon.png' height="20px" width="20px" alt="notification"/></li>
                 <li><img src='/assets/icons/search_icon.png'  height="15px" width="15px" alt="search"/></li>
                 <li><img src='/assets/icons/plus_icon.png'  height="30px" width="30px"  alt="add"/></li>
-                <li><img src='/assets/chick.jpg'  height="30px" width="30px" alt="profile_picture"/></li>
+                <li><img src='/assets/chick.jpg'  height="30px" width="30px" alt="profile_picture" onClick={() => Router.push('/Profilepage', "/profile")}/></li>
             </ul>
         </div> 
     </nav>
