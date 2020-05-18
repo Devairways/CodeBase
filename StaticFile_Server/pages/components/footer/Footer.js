@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
 
 function Footer() {
     const [open, setOpen] = useState(
@@ -54,17 +53,5 @@ function Footer() {
                 <p className="paneel" style={open[3] ? {maxHeight:"250px"}: {maxHeight:"0"}}>Support@codebase.com</p>
             </div>
             
-        </div>
-        <div className="disclaimer">
-            <h5>CodeBase.com &copy; 2020-2021 All rights reserved</h5>
-            <div>
-                <h5>Disclaimer</h5>
-                <h5>Privacy Policy</h5>
-                <h5>Terms and Conditions</h5>
-            </div>
-        </div> 
-    </footer>
-  );
-}
 
 export default Footer;
