@@ -2,9 +2,8 @@ import React, { Fragment } from "react";
 import NavBar from "./components/nav/Nav";
 import ProfileCard from "./components/profilecard/Profilecard";
 import FriendsList from "./components/friendslist/FriendsList";
-import FeedList from "./components/feed/FeedList";
+import ForumList from "./components/forum/ForumList";
 import Footer from "./components/footer/Footer";
-
 
 function HomePage() {
   return (
@@ -13,7 +12,8 @@ function HomePage() {
       <FriendsList
         style={{ gridColumn: "1/2", gridRow: "2/4", margin: "auto" }}
       />
-      <FeedList />
+
+      <ForumList />
       <ProfileCard />
       <Footer />
     </Fragment>
