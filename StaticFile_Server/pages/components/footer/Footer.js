@@ -52,6 +52,17 @@ function Footer() {
                 <img className="arrowRotate" style={open[3] ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow"/>
                 <p className="paneel" style={open[3] ? {maxHeight:"250px"}: {maxHeight:"0"}}>Support@codebase.com</p>
             </div>
-            
+        </div>
+        <div className="disclaimer">
+            <h5>CodeBase.com &copy; 2020-2021 All rights reserved</h5>
+            <div>
+                <h5>Disclaimer</h5>
+                <h5>Privacy Policy</h5>
+                <h5>Terms and Conditions</h5>
+            </div>
+        </div> 
+    </footer>
+  );
+}
 
 export default Footer;

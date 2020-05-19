@@ -3,7 +3,7 @@ import React from "react";
 const FriendsList = (props) => {
     return (
         <div className="friendslist">
-            <h3>Friends <span alt="arrow">></span></h3>
+            <h2>Friends <span alt="arrow">></span></h2>
             {
                 tempList.map((friend, i) =>{
                     return (
@@ -14,7 +14,7 @@ const FriendsList = (props) => {
                             <h4>{friend.user}</h4>
                         	<span>{friend.role}</span>
                         </div>
-                        <img src='/assets/icons/trophy_icon.png'  height="20px" width="20px"  alt="person"/>
+                        <img src='/assets/icons/person_icon.png'  height="35px" width="30px"  alt="person"/>
                     </div>
                     )
                 })
