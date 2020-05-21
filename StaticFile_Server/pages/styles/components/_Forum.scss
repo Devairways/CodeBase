@@ -101,6 +101,7 @@
 @media only screen and (min-width: 768px) {
   .forum-topics-container {
     width: 800px;
+    margin: 15px 0px;
     .forum-body-img {
       display: inline-flex;
     }
@@ -110,7 +111,8 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .forum-body-img {
-    display: inline-flexbox;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     margin: 10px;
     height: 200px;

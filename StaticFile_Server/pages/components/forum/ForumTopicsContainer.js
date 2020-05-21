@@ -1,6 +1,8 @@
 import React from "react";
 
-function ForumTopicsContainer() {
+function ForumTopicsContainer(props) {
+  console.log("props", props);
+  const { feed } = props;
   return (
     <div className="forum-topics-container">
       <header>
@@ -13,7 +15,7 @@ function ForumTopicsContainer() {
           </h4>
         </div>
         <div className="forum-tail">
-          <p>12 hours ago</p>
+          <p>{feed.count} hours ago</p>
         </div>
       </header>
       <div className="forum-body">
@@ -25,8 +27,8 @@ function ForumTopicsContainer() {
         <div className="forum-text">
           <div className="forum-body-header">
             <div className="forum-body-title">
-              <h2>Hello</h2>
-              <p>welcome</p>
+              <h2>{feed.user}</h2>
+              <p>{feed.category}</p>
             </div>
             <div className="forum-body-buttons">
               <button>Favorite</button>
@@ -53,4 +55,5 @@ function ForumTopicsContainer() {
     </div>
   );
 }
+
 export default ForumTopicsContainer;

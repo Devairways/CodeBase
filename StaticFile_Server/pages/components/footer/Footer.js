@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
 function Footer() {
-    const [open, setOpen] = useState(
-        {
-        1: false,
-        2: false,
-        3: false
-        });
-    
+  const [open, setOpen] = useState({
+    1: false,
+    2: false,
+    3: false,
+  });
+
   return (
     <footer className="footer">
         <div className="footer_main">
@@ -60,7 +59,7 @@ function Footer() {
                 <h5>Privacy Policy</h5>
                 <h5>Terms and Conditions</h5>
             </div>
-        </div> 
+        </div>
     </footer>
   );
 }
