@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-
+// voor nu even true!!
 const initialState = { authed: false };
 const store = createContext(initialState);
 const { Provider } = store;
