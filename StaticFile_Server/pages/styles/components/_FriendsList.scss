@@ -10,7 +10,7 @@
         padding: 10px 10px;
     }
     h4{
-        margin: 0;
+        margin: -5px 0;
     }
     span[alt="online"]{
         width: 10px;
@@ -23,6 +23,7 @@
     }
     span[alt="arrow"]{
         background: $highlight;
+        padding-left: 5px;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -42,11 +43,14 @@
     }
     img[alt="person"]{
         position: absolute;
-        padding-left: 180px;
+        padding-left: 170px;
     }
     div{
         width: fit-content;
         padding-left: 10px;
+    }
+    div span{
+        font-size: small;
     }
 }
 
