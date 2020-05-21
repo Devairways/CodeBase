@@ -1,0 +1,19 @@
+#modal{
+    border: 1px solid #e1e4e6;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px #999999;
+    margin: 10% 25%;
+    position: fixed;
+    background: white;
+    width: 50%;
+    height: 250px;
+    span, a{
+        cursor: pointer;
+    }
+    span[alt="register"]{
+        background: $highlight;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
