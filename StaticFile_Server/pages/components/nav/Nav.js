@@ -34,12 +34,14 @@ function NavBar({ openModal }) {
                         <li><img src='/assets/chick.jpg'  height="30px" width="30px" alt="profile_picture" onClick={() => Router.push('/Profilepage', "/profile")}/></li>
                     </ul>
                 </div> :
-                <div>
-                    <h3 onClick={() => setModal(true)}>login</h3>
+                <div className="unregistered">
+                    <h3 onClick={() => setModal(true)}>Sign in</h3>
+                    <span>||</span>
+                    <h3 onClick={() => setModal(true)}>Join</h3>
                 </div> 
             }
             {
-			    modal && <Modal type="login" params="nog niks" close={closeModal}/>
+			    modal && <Modal close={closeModal}/>
 		    }
         </nav>
     );
