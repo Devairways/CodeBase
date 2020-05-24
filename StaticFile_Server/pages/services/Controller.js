@@ -1,14 +1,14 @@
-export default API = {
+export default {
   getForumTopics: () =>
-    fetch("https://my-json-server.typicode.com/typicode/demo/posts")
-      .then((res) => res.json())
-      .then((data) => data),
-  setForumTopics: () =>
+    fetch(
+      "https://my-json-server.typicode.com/typicode/demo/posts"
+    ).then((res) => res.json()),
+  setForumTopics: (data) =>
     fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",
       body: JSON.stringify({
-        title: "foo",
-        body: "bar",
+        title: data.title,
+        body: data.body,
         userId: 1,
       }),
       headers: {

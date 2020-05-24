@@ -13,6 +13,8 @@ const StateProvider = ({ children }) => {
         return Object.assign({}, state, { data: action.payload, authed: true });
       case "getUsers":
         return Object.assign({}, state, { data: action.payload });
+      case "ForumTopics":
+        return Object.assign({}, state, { data: action.payload });
       default:
         throw new Error();
     }

@@ -1,7 +1,11 @@
 import React from "react";
+import { store } from "../../services/Store";
 import ForumTopicsContainer from "./ForumTopicsContainer";
 
 function ForumList() {
+  const userData = useContext(store);
+  console.log(userData);
+
   return (
     <div className="feedlist">
       <div className="feed_nav">
