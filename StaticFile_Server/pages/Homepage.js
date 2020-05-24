@@ -1,14 +1,21 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import NavBar from "./components/nav/Nav";
 import AuthorList from "./components/authorlist/AuthorList";
 import FeedList from "./components/feed/FeedList";
 import NewsFeed from "./components/newsfeed/NewsFeed";
 import Footer from "./components/footer/Footer";
+import Modal from './components/modal/Modal';
 
 function HomePage() {
+  const [modal, setModal] = useState({ open: false, type: "" });
+
+  const closeModal = () =>{
+		setModal(false);
+	}
+
   return (
     <Fragment>
-      <NavBar />
+      <NavBar openModal={setModal} />
       <img
         src="https://via.placeholder.com/200x500.png"
         className="commercial"
@@ -19,6 +26,9 @@ function HomePage() {
       <NewsFeed />
       <AuthorList />
       <Footer />
+      {
+        modal.open && <Modal type={modal.type} close={closeModal}/>
+      }
     </Fragment>
   );
 }

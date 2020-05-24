@@ -1,16 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import Router from 'next/router';
 import { store } from '../../services/Store';
-import Modal from '../modal/Modal';
 
 
 function NavBar({ openModal }) {
     const userData = useContext(store);
-    const [modal, setModal] = useState(false);
-
-    const closeModal = () =>{
-		setModal(false);
-	}
 
     return (
         <nav className="nav">
@@ -34,13 +28,12 @@ function NavBar({ openModal }) {
                         <li><img src='/assets/chick.jpg'  height="30px" width="30px" alt="profile_picture" onClick={() => Router.push('/Profilepage', "/profile")}/></li>
                     </ul>
                 </div> :
-                <div>
-                    <h3 onClick={() => setModal(true)}>login</h3>
+                <div className="unregistered">
+                    <h3 onClick={() => openModal({ open:true, type: "login"})}>Sign in</h3>
+                    <span>||</span>
+                    <h3 onClick={() => openModal({ open:true, type: "register"})}>Join</h3>
                 </div> 
             }
-            {
-			    modal && <Modal type="login" params="nog niks" close={closeModal}/>
-		    }
         </nav>
     );
 }
