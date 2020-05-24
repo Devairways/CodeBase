@@ -1,16 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import Router from 'next/router';
 import { store } from '../../services/Store';
-import Modal from '../modal/Modal';
 
 
 function NavBar({ openModal }) {
     const userData = useContext(store);
-    const [modal, setModal] = useState(false);
-
-    const closeModal = () =>{
-		setModal(false);
-	}
 
     return (
         <nav className="nav">
@@ -35,14 +29,11 @@ function NavBar({ openModal }) {
                     </ul>
                 </div> :
                 <div className="unregistered">
-                    <h3 onClick={() => setModal(true)}>Sign in</h3>
+                    <h3 onClick={() => openModal({ open:true, type: "login"})}>Sign in</h3>
                     <span>||</span>
-                    <h3 onClick={() => setModal(true)}>Join</h3>
+                    <h3 onClick={() => openModal({ open:true, type: "register"})}>Join</h3>
                 </div> 
             }
-            {
-			    modal && <Modal close={closeModal}/>
-		    }
         </nav>
     );
 }

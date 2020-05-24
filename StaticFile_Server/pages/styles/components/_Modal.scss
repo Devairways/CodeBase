@@ -2,6 +2,7 @@
 
 #overlay{
     position: fixed;
+    top: 0;
     width: 100%;
     height: 100%;
     background: rgba($color: $grey, $alpha: 0.6);
@@ -11,12 +12,12 @@
     border: 1px solid #e1e4e6;
     border-radius: 10px;
     box-shadow: 4px 4px 10px #999999;
-    margin: 150px 20px;
+    margin: 30px auto;
     position: fixed;
     right: 0;
     left: 0;
     top: 0;
-    bottom: 0;
+    width: 300px;
     background: white;
     padding: 10px;
     z-index: 10;
