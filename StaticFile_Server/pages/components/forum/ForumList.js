@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import API from "../../services/Controller";
 import { store } from "../../services/Store";
 import ForumTopicsContainer from "./ForumTopicsContainer";
 
 function ForumList() {
   const userData = useContext(store);
+  const { dispatch } = userData;
+
+  useEffect(function () {
+    API.getForumTopics().then((data) =>
+      dispatch({ type: "ForumTopics", payload: data })
+    );
+  });
 
   return (
     <div className="feedlist">
@@ -25,24 +33,3 @@ function ForumList() {
 }
 
 export default ForumList;
-
-const tempList = [
-  {
-    user: "React, Redux, Redis",
-    category: "javascript | tutorial",
-    count: 16,
-    id: 1,
-  },
-  {
-    user: "jQuery",
-    category: "javascript | tutorial",
-    count: 24,
-    id: 2,
-  },
-  {
-    user: "Vanilla Javascript",
-    category: "javascript | tutorial",
-    count: 11,
-    id: 3,
-  },
-];
