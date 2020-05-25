@@ -4,7 +4,6 @@ import ForumTopicsContainer from "./ForumTopicsContainer";
 
 function ForumList() {
   const userData = useContext(store);
-  console.log(userData);
 
   return (
     <div className="feedlist">
@@ -17,7 +16,7 @@ function ForumList() {
         </ul>
       </div>
       <div className="feed_content">
-        {tempList.map((feed) => {
+        {(userData.state.data || []).map((feed) => {
           return <ForumTopicsContainer feed={feed} />;
         })}
       </div>
