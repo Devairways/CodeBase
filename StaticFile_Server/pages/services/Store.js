@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from "react";
 // voor nu even true!!
-const initialState = { authed: false };
+const initialState = { authed: true };
 const store = createContext(initialState);
 const { Provider } = store;
 
@@ -10,7 +10,7 @@ const StateProvider = ({ children }) => {
       case "userLogin":
         return Object.assign({}, state, { data: action.payload, authed: true });
       case "userUpdate":
-        return Object.assign({}, state, { data: action.payload, authed: true });
+        return Object.assign({}, state, { data: action.payload });
       case "getUsers":
         return Object.assign({}, state, { data: action.payload });
       case "ForumTopics":

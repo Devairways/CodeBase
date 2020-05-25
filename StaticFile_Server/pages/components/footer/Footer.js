@@ -30,25 +30,25 @@ function Footer() {
                     <li><img src='/assets/icons/search_icon.png'  height="15px" width="15px" alt="search"/></li>
                 </ul>
             </div>
-            <div className="accordion" onClick={() =>{ setOpen({...open, [1]: !open[1]}); }}>
+            <div className="accordion">
                 <h4>Product</h4>
-                <img className="arrowRotate" style={open[1] ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow"/>
+                <img className="arrowRotate" style={open[1] ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow" onClick={() =>{ setOpen({...open, [1]: !open[1]}); }}/>
                 <ul className="paneel" style={open[1] ? {maxHeight:"250px"}: {maxHeight:"0"}}>
                     <li>How it works</li>
                     <li>Help & Support</li>
                 </ul>
             </div>
-            <div className="accordion" onClick={() =>{ setOpen({...open, 2: !open[2]}); }}>
+            <div className="accordion">
                 <h4>About Us</h4>
-                <img className="arrowRotate" style={open[2] ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow"/>
+                <img className="arrowRotate" style={open[2] ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow" onClick={() =>{ setOpen({...open, 2: !open[2]}); }}/>
                 <ul className="paneel" style={open[2] ? {maxHeight:"250px"}: {maxHeight:"0"}}>
                     <li>Mission</li>
                     <li>Investors</li>
                 </ul>
             </div>
-            <div className="accordion" onClick={() =>{ setOpen({...open, 3: !open[3]}); }}>
+            <div className="accordion">
                 <h4>Contact</h4>
-                <img className="arrowRotate" style={open[3] ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow"/>
+                <img className="arrowRotate" style={open[3] ? {transform:"rotate(180deg)"}: null} src='assets/arrow.png' alt="arrow" onClick={() =>{ setOpen({...open, 3: !open[3]}); }}/>
                 <p className="paneel" style={open[3] ? {maxHeight:"250px"}: {maxHeight:"0"}}>Support@codebase.com</p>
             </div>
         </div>

@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-../codebase
+./codebase
 /.next
 /.pnp
 .pnp.js
