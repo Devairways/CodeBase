@@ -16,15 +16,17 @@ function HomePage() {
   return (
     <Fragment>
       <NavBar openModal={setModal} />
-      <img
+      <FeedList />
+      <NewsFeed />
+      <div>
+        <AuthorList />
+        <img
         src="https://via.placeholder.com/200x500.png"
         className="commercial"
         style={{ gridColumn: "1/2", gridRow: "2/4", margin: "auto" }}
         alt="potential commercial"
-      />
-      <FeedList />
-      <NewsFeed />
-      <AuthorList />
+        />
+      </div>
       <Footer />
       {
         modal.open && <Modal type={modal.type} close={closeModal}/>

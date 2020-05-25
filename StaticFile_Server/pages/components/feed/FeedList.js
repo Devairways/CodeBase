@@ -1,26 +1,43 @@
-import React from 'react';
+import React,{ useState, useEffect } from 'react';
 import FeedCard from './FeedCard';
 
 function FeedList() {
-  return (
-    <div className="feedlist">
-        <div className="feed_nav">
-            <ul>
-                <li className="selected">Following</li>
-                <li>Featured</li>
-                <li>Top Posts</li>
-                <li>Recommended</li>
-            </ul>
+    const [nav,setNav] = useState("Following");
+    const [loading,setLoading] = useState(true);
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setLoading(false)
+          },1500)
+    },[nav]);
+
+    const navigate = (feed) =>{
+        setLoading(true);
+        setNav(feed);
+    }
+
+    return (
+        <div className="feedlist">
+            <div className="feed_nav">
+                <ul>
+                    <li onClick={()=> navigate("Following")} className={ nav == "Following" ? "selected": null }>Following</li>
+                    <li onClick={()=> navigate("Featured")} className={ nav == "Featured" ? "selected": null}>Featured</li>
+                    <li onClick={()=> navigate("Top Posts")} className={ nav == "Top Posts" ? "selected": null}>Top Posts</li>
+                    <li onClick={()=> navigate("Recommended")} className={ nav == "Recommended" ? "selected": null }>Recommended</li>
+                </ul>
+            </div>
+            <div className="feed_content">
+                {
+                    loading ?
+                    <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    :
+                    tempList.map(feed =>{
+                        return <FeedCard key={feed.id} feed={feed}/>
+                    }) 
+                }
+            </div>
         </div>
-        <div className="feed_content">
-            {
-                tempList.map(feed =>{
-                    return <FeedCard key={feed.id} feed={feed}/>
-                })
-            }
-        </div>
-    </div>
-  );
+    );
 }
 
 export default FeedList;

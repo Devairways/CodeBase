@@ -1,15 +1,16 @@
-import React, { useContext, useEffect, useDebugValue } from "react";
+import React, { useContext, useEffect, useState, useDebugValue } from "react";
 import API from "../../services/Controller";
 import { store } from "../../services/Store";
 
 function AuthorList() {
   const userData = useContext(store);
+  const [loading,setLoading] = useState(true);
   const { dispatch } = userData;
 
   useEffect(function () {
     API.getAuthorList().then((data) =>
       dispatch({ type: "AuthorList", payload: data })
-    );
+    ).then(() => setLoading(false));
   }, []);
 
   console.log(userData);
@@ -18,7 +19,11 @@ function AuthorList() {
       <h3>
         Top <span>Authors</span>
       </h3>
-      {(userData.state.authors || []).map((author, i) => {
+      {
+        loading ? 
+        <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        :
+        (userData.state.authors || []).map((author, i) => {
         return (
           <div key={i} className="author">
             <img

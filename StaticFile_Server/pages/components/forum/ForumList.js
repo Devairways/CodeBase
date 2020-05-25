@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import API from "../../services/Controller";
 import { store } from "../../services/Store";
 import ForumTopicsContainer from "./ForumTopicsContainer";
