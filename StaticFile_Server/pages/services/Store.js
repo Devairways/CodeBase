@@ -14,7 +14,9 @@ const StateProvider = ({ children }) => {
       case "getUsers":
         return Object.assign({}, state, { data: action.payload });
       case "ForumTopics":
-        return Object.assign({}, state, { data: action.payload });
+        return Object.assign({}, state, { forums: action.payload });
+      case "AuthorList":
+        return Object.assign({}, state, { authors: action.payload });
       default:
         throw new Error();
     }

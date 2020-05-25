@@ -7,8 +7,8 @@ function AuthorList() {
   const { dispatch } = userData;
 
   useEffect(function () {
-    API.getForumTopics().then((data) =>
-      dispatch({ type: "ForumTopics", payload: data })
+    API.getAuthorList().then((data) =>
+      dispatch({ type: "AuthorList", payload: data })
     );
   }, []);
 
@@ -18,7 +18,7 @@ function AuthorList() {
       <h3>
         Top <span>Authors</span>
       </h3>
-      {tempList.map((author, i) => {
+      {(userData.state.authors || []).map((author, i) => {
         return (
           <div key={i} className="author">
             <img
@@ -27,7 +27,7 @@ function AuthorList() {
               width="25px"
               alt="profile pic"
             />
-            <h4>{author.user}</h4>
+            <h4>{author.id}</h4>
             <div>
               <img
                 src="/assets/icons/trophy_icon.png"
@@ -35,7 +35,7 @@ function AuthorList() {
                 width="20px"
                 alt="Trophy"
               />
-              <span>{author.count}</span>
+              <span>{author.title}</span>
             </div>
           </div>
         );

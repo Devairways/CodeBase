@@ -24,7 +24,7 @@ function ForumList() {
         </ul>
       </div>
       <div className="feed_content">
-        {(userData.state.data || []).map((feed) => {
+        {(userData.state.forums || []).map((feed) => {
           return <ForumTopicsContainer feed={feed} />;
         })}
       </div>
