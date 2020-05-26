@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "blogs.index",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
