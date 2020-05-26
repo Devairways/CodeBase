@@ -4,9 +4,12 @@ module.exports = app => {
 
   // home page route
   app.get('/', (req, res) => {
-    res.send(
-      `<h1><b><center>Welcome to CodeBase Server.</center></b></h1>`
-    )
+    res.render('index');
+  })
+
+  // documentation route
+  app.get('/documentation', (req, res) => {
+    res.render('documentation');
   })
 
   // google auth route

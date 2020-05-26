@@ -1,5 +1,8 @@
 
 // This file initializes the backend server.
+
+const path = require('path');
+const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
@@ -14,6 +17,13 @@ mongoose.connect(keys.mongoURI, {
 });
 
 const app = express();
+
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(
   cookieSession({
