@@ -5,7 +5,7 @@ module.exports = app => {
   // home page route
   app.get('/', (req, res) => {
     res.send(
-      `<h1><b><center>Welcome to CodeBase Server</center></b></h1>`
+      `<h1><b><center>Welcome to CodeBase Server.</center></b></h1>`
     )
   })
 
