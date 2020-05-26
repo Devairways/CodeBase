@@ -28,6 +28,14 @@
     img[alt="add"]{
         background: $highlight;
     }
+    img[alt="notification"]{
+        margin-top: 0;
+    }
+    img[alt="new"]{
+        margin-left: -12px;
+        margin-top: -8px;
+        position: fixed;
+    }
 }
 
 .nav_main{
@@ -110,6 +118,9 @@ li{
         }
         li{
             padding: 5px 10px;
+        }
+        img[alt="new"]{
+            margin-top: 0;
         }
     }
 }

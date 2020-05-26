@@ -7,7 +7,7 @@ import FriendsList from "./components/friendslist/FriendsList";
 import ForumList from "./components/forum/ForumList";
 import Footer from "./components/footer/Footer";
 
-function HomePage() {
+function TutsPage() {
   const userData = useContext(store);
 
   useEffect(()=>{
@@ -27,4 +27,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default TutsPage;

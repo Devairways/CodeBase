@@ -25,6 +25,12 @@ app.prepare().then(() => {
     server.get("/profile", (req, res) => {
       return app.render(req, res, "/Profilepage", req.query);
     });
+    server.get("/tutorials", (req, res) => {
+      return app.render(req, res, "/Tutorialspage", req.query);
+    });
+    server.get("/blog/:id", (req, res) => {
+      return app.render(req, res, "/Blogpage", req.query);
+    });
   
     // catch all others
     server.all("*", (req, res) => {
